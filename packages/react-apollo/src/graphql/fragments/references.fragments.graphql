@@ -1,0 +1,5 @@
+fragment Reference on reference {
+  id
+  recipient
+  author
+}
