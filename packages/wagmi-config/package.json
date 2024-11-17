@@ -1,0 +1,18 @@
+{
+  "name": "@repo/wagmi-config",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "generate:js": "wagmi generate --config ./src/typescript.config.ts",
+    "generate:react": "wagmi generate --config ./src/react.config.ts",
+    "generate": "yarn generate:js && yarn generate:react"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/evm-contracts": "*",
+    "@repo/typescript-config": "*",
+    "@wagmi/cli": "^2.1.18",
+    "typescript": "^5.5.4"
+  }
+}
