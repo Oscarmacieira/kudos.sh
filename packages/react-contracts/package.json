@@ -1,0 +1,36 @@
+{
+  "name": "@repo/react-contracts",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/evm-contracts": "*",
+    "@repo/typescript-config": "*",
+    "@tanstack/react-query": "^5.60.5",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "viem": "^2.21.47",
+    "wagmi": "^2.12.33"
+  },
+  "peerDependencies": {
+    "@repo/evm-contracts": "*",
+    "@tanstack/react-query": "^5.60.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "viem": "^2.21.47",
+    "wagmi": "^2.12.33"
+  }
+}
