@@ -12,8 +12,9 @@
     "compile": "forge compile",
     "coverage": "forge coverage --no-match-coverage '(test|script|mock)'",
     "test": "forge test",
+    "generate": "./script/make-packages.sh",
     "anvil:start": "anvil",
-    "anvil:deploy": "./script/anvil/run_deployment.sh",
+    "anvil:deploy": "./script/anvil/run_deployment.sh && yarn generate",
     "build": "tsc"
   },
   "devDependencies": {

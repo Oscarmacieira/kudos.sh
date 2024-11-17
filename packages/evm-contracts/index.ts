@@ -1,11 +1,15 @@
 import ANVIL_DEPLOYMENT from "./script/anvil/core__deployment.json";
 import ANVIL_LATEST_RUN from "./broadcast/KudosDeployment.s.sol/31337/run-latest.json";
 
+const ANVIL_CONFIG = {
+  deployment: ANVIL_DEPLOYMENT,
+  latestRun: ANVIL_LATEST_RUN,
+  id: 31337,
+  name: "anvil",
+} as const;
+
 const CONFIG_BY_CHAIN_ID = {
-  [31337]: {
-    deployment: ANVIL_DEPLOYMENT,
-    latestRun: ANVIL_LATEST_RUN,
-  },
+  [ANVIL_CONFIG.id]: ANVIL_CONFIG,
 } as const;
 
 type ChainId = keyof typeof CONFIG_BY_CHAIN_ID;
@@ -22,5 +26,6 @@ export {
   type EvmAddress,
   ANVIL_DEPLOYMENT,
   ANVIL_LATEST_RUN,
+  ANVIL_CONFIG,
   CONFIG_BY_CHAIN_ID,
 };
