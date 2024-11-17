@@ -5,7 +5,10 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "docker:up": "docker compose -f ./docker/dev/compose.dev.yml --env-file .env up -d",
+    "docker:down": "docker compose -f ./docker/dev/compose.dev.yml down",
+    "docker:is-ready": "docker exec kudos-db pg_isready"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
