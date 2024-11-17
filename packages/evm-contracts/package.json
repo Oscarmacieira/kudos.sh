@@ -1,0 +1,23 @@
+{
+  "name": "@repo/evm-contracts",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "compile": "forge compile",
+    "coverage": "forge coverage --no-match-coverage '(test|script|mock)'",
+    "test": "forge test",
+    "anvil:start": "anvil",
+    "anvil:deploy": "./script/anvil/run_deployment.sh",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "typescript": "5.5.4"
+  }
+}
