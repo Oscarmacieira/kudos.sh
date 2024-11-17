@@ -12,12 +12,14 @@ type ChainId = keyof typeof CONFIG_BY_CHAIN_ID;
 type Deployment = (typeof CONFIG_BY_CHAIN_ID)[ChainId]["deployment"];
 type LatestRun = (typeof CONFIG_BY_CHAIN_ID)[ChainId]["latestRun"];
 type ProtocolConfig = Deployment["ProtocolConfig"];
+type EvmAddress = `0x${string}`;
 
 export {
   type ChainId,
   type Deployment,
   type LatestRun,
   type ProtocolConfig,
+  type EvmAddress,
   ANVIL_DEPLOYMENT,
   ANVIL_LATEST_RUN,
   CONFIG_BY_CHAIN_ID,
